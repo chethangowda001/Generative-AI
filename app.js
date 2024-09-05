@@ -2,7 +2,10 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-require("dotenv").config();
+require('dotenv').config();
+const port = process.env.PORT || 3000;
+
+
 
 const app = express();
 
@@ -48,6 +51,6 @@ app.get("/api/prompt", async (req, res) => {
 });
 
 // Start the server
-app.listen(8000, () => {
-  console.log("Server connected to port 8000");
+app.listen(port, () => {
+  console.log(`Server connected to port ${port}`);
 });
