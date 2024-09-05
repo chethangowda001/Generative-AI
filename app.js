@@ -21,7 +21,7 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
 // Route to render the home view
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
   res.render("home", { generativeText: null }); // Initialize without generated text
 });
 
